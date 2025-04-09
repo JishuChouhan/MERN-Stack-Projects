@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* * {
-    outline: 1px solid red;
-  } */
-  
-  html, body {
-    color: white;
-    overflow-x: hidden;
-  }
+* {
+  /* outline: solid; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+.homepage_bg {
+  background: url("../src/assets/Images/Geometric.png");
+}

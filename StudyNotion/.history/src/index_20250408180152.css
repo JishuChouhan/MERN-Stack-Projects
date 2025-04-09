@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* outline: solid; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  color: white;
+  overflow-x: hidden;
+}
+
+.homepage_bg {
+  background: url("../src/assets/Images/Geometric.png");
+}

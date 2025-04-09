@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    outline: 1px solid;
+  }
+  
+  html, body {
+    color: white;
+    overflow-x: hidden;
+  }

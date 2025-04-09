@@ -5,6 +5,8 @@ import { HighlightText } from "../components/core/Homepage/HighlightText";
 import CTAButton from "../components/core/Homepage/Button";
 import Banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../components/core/Homepage/CodeBlocks";
+import LearningLanguageSection from "../components/core/Homepage/LearningLanguageSection";
+import TimeLineSection from "../components/core/Homepage/TimeLineSection";
 
 const Home = () => {
   return (
@@ -63,7 +65,9 @@ const Home = () => {
               with our online courses.
             </div>
           }
-          subheading={"Our courses are designed and taught by industry experts who have yers of experience in coding and are passionate about sharing their knowledge with you."}
+          subheading={
+            "Our courses are designed and taught by industry experts who have yers of experience in coding and are passionate about sharing their knowledge with you."
+          }
           ctabtn1={{
             btnText: "Try it yourself",
             linkto: "/signup",
@@ -76,7 +80,9 @@ const Home = () => {
           }}
           codeBlock={`<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>Document</title>\n</head>\n<body>\n</body>\n</html>`}
           codeColor={"text-yellow-25"}
-          
+          backgroundGradient={
+            "bg-gradient-to-br from-[#2f2f2f]/80 via-[#1f1f1f]/90 to-black/95"
+          }
         />
       </div>
 
@@ -91,7 +97,9 @@ const Home = () => {
               with our online courses.
             </div>
           }
-          subheading={"Go ahead, give it a try. Our hands-on learning environment means you'll be writing real code from your very first lesson."}
+          subheading={
+            "Go ahead, give it a try. Our hands-on learning environment means you'll be writing real code from your very first lesson."
+          }
           ctabtn1={{
             btnText: "Continue lesson",
             linkto: "/signup",
@@ -104,9 +112,53 @@ const Home = () => {
           }}
           codeBlock={`<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>Document</title>\n</head>\n<body>\n</body>\n</html>`}
           codeColor={"text-yellow-25"}
-
-          backgroundGradient={"bg-gradient-to-r from-purple-500 via-pink-500 to-red-500"}
+          backgroundGradient={
+            "bg-gradient-to-br from-[#0d1b2a]/80 via-[#1b263b]/90 to-[#1e293b]/95"
+          }
         />
+      </div>
+
+      {/* Section 4 */}
+      <div className="bg-white text-richblack-700">
+        <div className="homepage_bg h-[310px]">
+          <div className="w-11/12 max-w-maxContent flex flex-col items-center gap-5 mx-auto">
+            <div className="h-[120px]"></div>
+            <div className="flex flex-row text-white gap-7">
+              <CTAButton active={true} linkto={"/signup"}>
+                <div className="flex items-center gap-3">
+                  Explore All Catalog
+                  <FaArrowRight />
+                </div>
+              </CTAButton>
+              <CTAButton active={false} linkto={"/signup"}>
+                <div className="">Learn More</div>
+              </CTAButton>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto w-11/12 max-w-maxContent flex flex-col items-center justify-between gap-5">
+          <div className="flex flex-row gap-5 overflow-hidden mb-10">
+            <div className="text-4xl font-semibold w-[45%]">
+              Get the Skills you need for a
+              <HighlightText text={"Job that is in demand."} />
+            </div>
+            <div className="flex flex-col gap-10 w-[40%] items-start">
+              <div className="text-[16px]">
+                The modern StudyNotion is the dictates its own terms. Today, to
+                be a competitive specialist requires more than professional
+                skills.
+              </div>
+              <CTAButton active={true} linkto={"/signup"}>
+                <div className="">Learn more</div>
+              </CTAButton>
+            </div>
+          </div>
+          <TimeLineSection />
+        <LearningLanguageSection />
+        </div>
+
+        
       </div>
 
       {/* Footer */}

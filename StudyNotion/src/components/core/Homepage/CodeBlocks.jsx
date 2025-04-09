@@ -4,7 +4,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 const CodeBlocks = ({position, heading, subheading, ctabtn1, ctabtn2, codeBlock, backgroundGradient, codeColor}) => {
   return (
-    <div className={`flex ${position} my-20 justify-between gap-20`}>
+    <div className={`flex ${position} my-20 justify-between gap-20 `}>
         {/* {SECTION 1} */}
         <div className="w-[50%] flex flex-col gap-5">
             {heading}
@@ -29,7 +29,7 @@ const CodeBlocks = ({position, heading, subheading, ctabtn1, ctabtn2, codeBlock,
 
         {/* Section 2 */}
         <div className={`flex flex-row h-fit w-[100%] lg:w-[500px] ${backgroundGradient}`}>
-            <div className="text-center flex flex-col w-[10%] text-richblack-400 font-inter font-bold pr-5">
+            <div className="text-center flex flex-col w-[10%] text-richblack-400 font-inter font-bold pr-5 ">
                 <p>1</p>
                 <p>2</p>
                 <p>3</p>
