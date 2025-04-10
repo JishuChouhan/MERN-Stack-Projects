@@ -8,7 +8,6 @@ import CodeBlocks from "../components/core/Homepage/CodeBlocks";
 import LearningLanguageSection from "../components/core/Homepage/LearningLanguageSection";
 import TimeLineSection from "../components/core/Homepage/TimeLineSection";
 import InstructorSection from "../components/core/Homepage/InstructorSection";
-import ExploreMore from "../components/core/Homepage/ExploreMore";
 
 const Home = () => {
   return (

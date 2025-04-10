@@ -7,7 +7,7 @@ import CTAButton from "../../../components/core/Homepage/Button"
 
 const LearningLanguageSection = () => {
   return(
-    <div className="mt-20 mb-24">
+    <div className="mt-20">
         <div className="flex flex-col gap-5 items-center">
             <div className="text-4xl font-semibold text-center">
                 Your Swiss Knife for
@@ -20,7 +20,7 @@ const LearningLanguageSection = () => {
             
             <div className="flex flex-row items-center justify-center mt-5 h-[400px] w-[350px] gap-40"> 
                 <img src={know_your_progress} alt="progress" 
-                className="object-contain -mr-32 rotate-12"
+                className="object-contain -mr-32"
                 />
                 <img src={plan_your_lesson} alt="progress" 
                 className="object-contain"

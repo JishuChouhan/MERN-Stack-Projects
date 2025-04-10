@@ -8,7 +8,6 @@ import CodeBlocks from "../components/core/Homepage/CodeBlocks";
 import LearningLanguageSection from "../components/core/Homepage/LearningLanguageSection";
 import TimeLineSection from "../components/core/Homepage/TimeLineSection";
 import InstructorSection from "../components/core/Homepage/InstructorSection";
-import ExploreMore from "../components/core/Homepage/ExploreMore";
 
 const Home = () => {
   return (
@@ -56,7 +55,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Code Section 1 */}
+      {/* Section 2 */}
       <div className="px-32">
         <CodeBlocks
           position={"lg:flex-row"}
@@ -88,7 +87,7 @@ const Home = () => {
         />
       </div>
 
-      {/* Code Section 2 */}
+      {/* Section 3 */}
       <div className="px-32">
         <CodeBlocks
           position={"lg:flex-row-reverse"}
@@ -120,9 +119,6 @@ const Home = () => {
         />
       </div>
 
-      <ExploreMore />
-
-      {/* Section 2 */}
       <div className="bg-white text-richblack-700">
         <div className="homepage_bg h-[310px]">
           <div className="w-11/12 max-w-maxContent flex flex-col items-center gap-5 mx-auto">
@@ -165,10 +161,10 @@ const Home = () => {
         
       </div>
 
-      {/* Section 3 */}
-      <div className="w-11/12 mx-auto max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+      {/* Section 4 */}
+      <div className="gap-8 bg-richblack-900 text-white">
         <InstructorSection />
-        {/* <h2 className="text-center text-4xl font-semibold mt-10">Review from other Learners</h2> */}
+        <h2 className="text-center text-4xl font-semibold mt-10">Review from other Learners</h2>
 
       </div>
 

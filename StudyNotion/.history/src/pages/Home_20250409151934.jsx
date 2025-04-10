@@ -7,8 +7,6 @@ import Banner from "../assets/Images/banner.mp4";
 import CodeBlocks from "../components/core/Homepage/CodeBlocks";
 import LearningLanguageSection from "../components/core/Homepage/LearningLanguageSection";
 import TimeLineSection from "../components/core/Homepage/TimeLineSection";
-import InstructorSection from "../components/core/Homepage/InstructorSection";
-import ExploreMore from "../components/core/Homepage/ExploreMore";
 
 const Home = () => {
   return (
@@ -56,7 +54,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Code Section 1 */}
+      {/* Section 2 */}
       <div className="px-32">
         <CodeBlocks
           position={"lg:flex-row"}
@@ -88,7 +86,7 @@ const Home = () => {
         />
       </div>
 
-      {/* Code Section 2 */}
+      {/* Section 3 */}
       <div className="px-32">
         <CodeBlocks
           position={"lg:flex-row-reverse"}
@@ -115,14 +113,12 @@ const Home = () => {
           codeBlock={`<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="UTF-8">\n<meta name="viewport" content="width=device-width, initial-scale=1.0">\n<title>Document</title>\n</head>\n<body>\n</body>\n</html>`}
           codeColor={"text-yellow-25"}
           backgroundGradient={
-            "bg-gradient-to-br from-[#0d1b2a]/80 via-[#1b263b]/90 to-[#1e293b]/95"
+            "bg-[linear-gradient(118.19deg,_#1fa2ff_-3.62%,_#12d8fa_50.44%,_#a6ffcb_104.51%)]"
           }
         />
       </div>
 
-      <ExploreMore />
-
-      {/* Section 2 */}
+      {/* Section 4 */}
       <div className="bg-white text-richblack-700">
         <div className="homepage_bg h-[310px]">
           <div className="w-11/12 max-w-maxContent flex flex-col items-center gap-5 mx-auto">
@@ -163,13 +159,6 @@ const Home = () => {
         </div>
 
         
-      </div>
-
-      {/* Section 3 */}
-      <div className="w-11/12 mx-auto max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
-        <InstructorSection />
-        {/* <h2 className="text-center text-4xl font-semibold mt-10">Review from other Learners</h2> */}
-
       </div>
 
       {/* Footer */}
