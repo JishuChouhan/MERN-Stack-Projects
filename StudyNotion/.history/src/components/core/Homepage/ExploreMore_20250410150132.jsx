@@ -6,9 +6,9 @@ import CourseCard from './CourseCard';
 const tabsName = [
     "Free",
     "New to Coding",
-    "Career Paths",
     "Most Popular",
-    "Skills Paths",
+    "Skill Paths",
+    "Career Paths"
 ];
 const ExploreMore = () => {
   const  [currentTab, setCurrentTab] = useState(tabsName[0]);
@@ -47,7 +47,7 @@ const ExploreMore = () => {
       </div>
       <div className="lg:h-[150px]"></div>
       {/* course card group -> */}
-      <div className="absolute flex flex-row gap-10 justify-between w-full">
+      {/* <div className="">
         {
           courses.map((element, index) => {
             return(
@@ -61,7 +61,7 @@ const ExploreMore = () => {
             )
           })
         }
-      </div>
+      </div> */}
     </div>
   )
 }

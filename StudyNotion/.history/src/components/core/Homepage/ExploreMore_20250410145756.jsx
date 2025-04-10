@@ -1,24 +1,23 @@
 import React, { useState } from 'react'
 import { HomePageExplore } from '../../../data/Homepage-Explore';
 import { HighlightText } from './HighlightText';
-import CourseCard from './CourseCard';
 
 const tabsName = [
     "Free",
     "New to Coding",
-    "Career Paths",
     "Most Popular",
-    "Skills Paths",
+    "Skill Paths",
+    "Career Paths"
 ];
 const ExploreMore = () => {
   const  [currentTab, setCurrentTab] = useState(tabsName[0]);
-  const [courses, setCourses] = useState(HomePageExplore[0]);
-  const [currentCard, setCurrentCard] = useState(HomePageExplore[0].courses[0].heading);
+  const [courses, setCourses] = useState(HomePageExplore[4]);
+  const [currentCard, setCurrentCard] = useState(HomePageExplore[4].courses[4].heading);
   const setmyCards = (value) => {
     setCurrentTab(value);
     const result = HomePageExplore.filter((course) => course.tag === value);
-    setCourses(result[0].courses);
-    setCurrentCard(result[0].courses[0].heading);
+    setCourses(result[4].courses);
+    setCurrentCard(result[4].courses[4].heading);
   }
   return (
     <div>
@@ -47,7 +46,7 @@ const ExploreMore = () => {
       </div>
       <div className="lg:h-[150px]"></div>
       {/* course card group -> */}
-      <div className="absolute flex flex-row gap-10 justify-between w-full">
+      <div className="">
         {
           courses.map((element, index) => {
             return(

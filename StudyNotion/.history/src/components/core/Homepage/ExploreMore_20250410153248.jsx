@@ -6,9 +6,9 @@ import CourseCard from './CourseCard';
 const tabsName = [
     "Free",
     "New to Coding",
-    "Career Paths",
     "Most Popular",
-    "Skills Paths",
+    "Skill Paths",
+    "Career Paths"
 ];
 const ExploreMore = () => {
   const  [currentTab, setCurrentTab] = useState(tabsName[0]);
@@ -31,7 +31,7 @@ const ExploreMore = () => {
         Learn to build anything you can imagine.
       </p>
 
-      <div className="mt-5 flex flex-row rounded-full bg-richblack-900 mb-5 border-richblack-100 px-1 py-1">
+      <div className="mt-5 flex flex-row items-center rounded-full bg-richblack-900 mb-5 border-richblack-100 px-1 py-1">
         {
           tabsName.map((element, index) => {
             return (

@@ -6,9 +6,9 @@ import CourseCard from './CourseCard';
 const tabsName = [
     "Free",
     "New to Coding",
-    "Career Paths",
     "Most Popular",
-    "Skills Paths",
+    "Skill Paths",
+    "Career Paths"
 ];
 const ExploreMore = () => {
   const  [currentTab, setCurrentTab] = useState(tabsName[0]);
