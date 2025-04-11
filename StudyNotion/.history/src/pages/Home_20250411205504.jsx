@@ -9,7 +9,6 @@ import LearningLanguageSection from "../components/core/Homepage/LearningLanguag
 import TimeLineSection from "../components/core/Homepage/TimeLineSection";
 import InstructorSection from "../components/core/Homepage/InstructorSection";
 import ExploreMore from "../components/core/Homepage/ExploreMore";
-import Footer from "../components/core/Footer";
 
 const Home = () => {
   return (
