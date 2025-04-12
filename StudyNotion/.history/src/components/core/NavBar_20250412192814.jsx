@@ -3,14 +3,7 @@ import { NavBarLinks } from '../../data/NavBarLinks';
 import { Link, matchPath } from 'react-router-dom';
 import logo from "../../assets/Logo/mylogo.png"
 import { useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 const NavBar = () => {
-
-  const {token} = useSelector((state) => state.auth);
-  const {user} = useSelector((state) => state.profile);
-  const {totalItems} = useSelector((state) => state.cart);
-
   const location = useLocation();
   const matchRoute = (route) => {
     return matchPath({path:route}, location.pathname);
@@ -43,18 +36,6 @@ const NavBar = () => {
             }
           </ul>
         </nav>
-
-        {/* login/signUp/Dashboard */}
-        <div className="flex gap-x-4 items-center">
-          {
-            // use const file for use Instrictor
-            user && user?.accountType != "Instructor" && (
-              <Link to="dashboard/cart" className='relative'>
-                <AiOutlineShoppingCart />
-              </Link>
-            )
-          }
-        </div>
         </div>
     </div>
   )

@@ -4,7 +4,6 @@ import { Link, matchPath } from 'react-router-dom';
 import logo from "../../assets/Logo/mylogo.png"
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 const NavBar = () => {
 
   const {token} = useSelector((state) => state.auth);

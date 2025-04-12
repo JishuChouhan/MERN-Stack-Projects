@@ -47,7 +47,7 @@ const Home = () => {
           </CTAButton>
         </div>
 
-        <div className="shadow-blue-600 my-12 mx-20 shadow-2xl">
+        <div className="shadow-richblue-600 my-12 mx-20 shadow-sm">
           <video src="" muted loop autoPlay>
             <source src={Banner} type="video/mp4" />
           </video>

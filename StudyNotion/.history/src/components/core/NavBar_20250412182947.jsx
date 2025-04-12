@@ -1,21 +1,8 @@
 import React from 'react'
 import { NavBarLinks } from '../../data/NavBarLinks';
-import { Link, matchPath } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from "../../assets/Logo/mylogo.png"
-import { useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
 const NavBar = () => {
-
-  const {token} = useSelector((state) => state.auth);
-  const {user} = useSelector((state) => state.profile);
-  const {totalItems} = useSelector((state) => state.cart);
-
-  const location = useLocation();
-  const matchRoute = (route) => {
-    return matchPath({path:route}, location.pathname);
-  }
-
   return (
     <div className='flex h-14 items-center justify-center border-b-[1px] border-richblack-700'>
         <div className="flex w-11/12 max-w-maxContent items-center justify-between">
@@ -32,7 +19,7 @@ const NavBar = () => {
                   {
                     link.title === "Catalog" ? (<></>) : (
                       <Link to={link?.path}>
-                        <p className={`${matchRoute(link?.path) ? "text-yellow-25" : "text-richblack-25" }`}>
+                        <p className='text-yellow-25'>
                           {link.title}
                         </p>
                       </Link>
@@ -43,18 +30,6 @@ const NavBar = () => {
             }
           </ul>
         </nav>
-
-        {/* login/signUp/Dashboard */}
-        <div className="flex gap-x-4 items-center">
-          {
-            // use const file for use Instrictor
-            user && user?.accountType != "Instructor" && (
-              <Link to="dashboard/cart" className='relative'>
-                <AiOutlineShoppingCart />
-              </Link>
-            )
-          }
-        </div>
         </div>
     </div>
   )
