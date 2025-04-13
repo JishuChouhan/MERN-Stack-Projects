@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import ProfileDropdown from "./Auth/ProfileDropdown";
 import { ApiConnector } from "../../services/ApiConnector";
-import { categories } from "../../services/Apis";
 
 const NavBar = () => {
   const { token } = useSelector((state) => state.auth);
@@ -76,7 +75,7 @@ const NavBar = () => {
         <div className="flex gap-x-4 items-center">
           {
             // use const file for use Instrictor
-            user && user?.accountType !== "Instructor" && (
+            user && user?.accountType != "Instructor" && (
               <Link to="dashboard/cart" className="relative">
                 <AiOutlineShoppingCart />
                 {

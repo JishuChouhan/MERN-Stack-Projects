@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavBarLinks } from "../../data/NavBarLinks";
 import { Link, matchPath } from "react-router-dom";
 import logo from "../../assets/Logo/mylogo.png";
@@ -6,8 +6,6 @@ import { useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import ProfileDropdown from "./Auth/ProfileDropdown";
-import { ApiConnector } from "../../services/ApiConnector";
-import { categories } from "../../services/Apis";
 
 const NavBar = () => {
   const { token } = useSelector((state) => state.auth);
@@ -15,25 +13,6 @@ const NavBar = () => {
   const { totalItems } = useSelector((state) => state.cart);
 
   const location = useLocation();
-
-  const [subLinks, setSubLinks] = useState([]);
-
-
-  const fetchSublinks = async() => {
-    try{
-      const result = ApiConnector("GET", categories.CATEGORIES_API);
-      console.log("Printing Sublinks result:", result);
-      setSubLinks(result.data.data);
-    }catch(e){
-      console.log("Could not fetch the category list");
-      
-    }
-  }
-
-  useEffect(() => {
-    fetchSublinks();
-  }, [])
-
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname);
   };
@@ -51,9 +30,7 @@ const NavBar = () => {
             {NavBarLinks.map((link, index) => (
               <li key={index}>
                 {link.title === "Catalog" ? (
-                  <div>
-                    <p>{link.title}</p>
-                  </div>
+                  <></>
                 ) : (
                   <Link to={link?.path}>
                     <p
@@ -76,7 +53,7 @@ const NavBar = () => {
         <div className="flex gap-x-4 items-center">
           {
             // use const file for use Instrictor
-            user && user?.accountType !== "Instructor" && (
+            user && user?.accountType != "Instructor" && (
               <Link to="dashboard/cart" className="relative">
                 <AiOutlineShoppingCart />
                 {

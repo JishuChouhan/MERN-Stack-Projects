@@ -76,7 +76,7 @@ const NavBar = () => {
         <div className="flex gap-x-4 items-center">
           {
             // use const file for use Instrictor
-            user && user?.accountType !== "Instructor" && (
+            user && user?.accountType != "Instructor" && (
               <Link to="dashboard/cart" className="relative">
                 <AiOutlineShoppingCart />
                 {
