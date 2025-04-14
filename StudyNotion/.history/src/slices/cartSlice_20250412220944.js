@@ -12,7 +12,6 @@ const cartSlice = createSlice({
         setToken(state, value){
             state.token = value.payload;
         },
-        // write these fun HW
         // add to cart
         // removeFromCart
         // resetCart

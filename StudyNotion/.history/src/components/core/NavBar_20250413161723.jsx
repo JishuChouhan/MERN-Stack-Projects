@@ -28,23 +28,23 @@ const NavBar = () => {
 
   const location = useLocation();
 
-  // const [subLinks, setSubLinks] = useState([]);
+  const [subLinks, setSubLinks] = useState([]);
 
 
-  // const fetchSublinks = async() => {
-  //   try{
-  //     const result = ApiConnector("GET", categories.CATEGORIES_API);
-  //     console.log("Printing Sublinks result:", result);
-  //     setSubLinks(result.data.data);
-  //   }catch(e){
-  //     console.log("Could not fetch the category list");
+  const fetchSublinks = async() => {
+    try{
+      const result = ApiConnector("GET", categories.CATEGORIES_API);
+      console.log("Printing Sublinks result:", result);
+      setSubLinks(result.data.data);
+    }catch(e){
+      console.log("Could not fetch the category list");
       
-  //   }
-  // }
+    }
+  }
 
-  // useEffect(() => {
-  //   fetchSublinks();
-  // }, [])
+  useEffect(() => {
+    fetchSublinks();
+  }, [])
 
   const matchRoute = (route) => {
     return matchPath({ path: route }, location.pathname);
@@ -68,17 +68,7 @@ const NavBar = () => {
                     <IoIosArrowDropdownCircle />
 
                     <div className="invisible absolute left-[50%] translate-x-[-50%] translate-y-[50%] top-[50%] flex flex-col rounded-md bg-richblack-5 p-4 text-richblack-700 opacity-0 transition-all duration-200 group-hover:visible group-hover:opacity-100 lg:w-[300px]">
-                      <div className="absolute left-[58%] top-0 h-4 w-6 rotate-45 rounded bg-richblack-5">
-                        {
-                          subLinks.length ? (
-                              subLinks.map((subLink, index) => (
-                                <Link to={`${subLink.link}`} key={index}>
-                                  <p>{subLink.title}</p>
-                                </Link>
-                              ))
-                          ) : (<div></div>)
-                        }
-                      </div>
+                      <div className="absolute left-[57%] top-10 h-6 w-6 rotate-45 rounded bg-richblack-5"></div>
                     </div>
                   </div>
                 ) : (
